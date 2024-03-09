@@ -1,0 +1,100 @@
+header {
+    background: linear-gradient(90deg, rgb(255, 255, 255), rgb(228, 228, 228), rgb(255, 255, 255));
+}
+
+.headerContainer {
+    
+    max-height: 150px;
+    width: 100%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin: 0, 20px;
+    padding: 50px;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    color: black;
+
+}
+
+.iconContainer {
+    flex: 1 1 0;
+    font-size: 3.5rem;
+    margin-left: 0px;
+    padding-left: 0;
+    position: relative;
+    top: 10px;
+}
+
+.referenceLinks {
+    color: inherit;
+    transition: color 0.5s ease;
+}
+
+.referenceLinks:hover {
+    color: hsl(0, 0%, 33%);
+}
+
+.links li {
+    display: inline;
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+
+.icons a {
+    position: relative;
+    top: 5px;
+    font-size: 2rem;
+}
+
+.mobile_btn {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+
+    .mobile_btn {
+        display: block;
+        position: relative;
+        right: 0.5rem;
+        cursor: pointer;
+        font-size: 4rem;
+        top: 5px;
+        z-index: 10;
+    }
+
+    .links li {
+        padding: 5vh ;
+        margin: 1vh;
+        font-size: 5vw;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        width: 100vw;
+
+        background-color: hsl(0, 0%, 7%);
+        color: white;
+        z-index: 10;
+        transition: left 1s ease;
+    }
+
+    .active {
+        left: 0;
+    }
+
+}
